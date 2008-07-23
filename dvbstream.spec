@@ -4,7 +4,7 @@
 %define name	dvbstream
 %define version 0.5
 %define beta	0
-%define mdkrel	%mkrel 2
+%define mdkrel	%mkrel 4
 
 %if %mdkversion < 1000
 %define kernel_rel 2.4.22-28.tmb.1mdk
