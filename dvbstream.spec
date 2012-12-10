@@ -114,3 +114,32 @@ rm -rf $RPM_BUILD_ROOT
 %dir %_libdir/%name
 %_libdir/%name/*
 
+
+
+%changelog
+* Thu Jul 24 2008 Thierry Vignaud <tv@mandriva.org> 0.5-4mdv2009.0
++ Revision: 244557
+- rebuild
+- kill re-definition of %%buildroot on Pixel's request
+
+  + Olivier Blin <oblin@mandriva.com>
+    - restore BuildRoot
+
+* Tue Dec 04 2007 Thierry Vignaud <tv@mandriva.org> 0.5-2mdv2008.1
++ Revision: 115126
+- use %%mkrel
+- import dvbstream
+
+
+* Tue Jun 08 2004 Svetoslav Slavtchev <svetljo@gmx.de> 0.5-3mdk
+- initial contrib
+
+* Sun Apr 04 2004 Svetoslav Slavtchev <svetljo@gmx.de> 0.5-2mdk
+- fix group
+- add changelog :-)
+- rename spec to dvbstream (!dvbstream2)
+  update-alternatives should be working :-)
+
+* Sun Apr 04 2004 Svetoslav Slavtchev <svetljo@gmx.de> 0.5-1mdk
+- initial build for club
+
