@@ -33,7 +33,7 @@ Prefix:		%{_prefix}
  here.
 
 %prep
-%autosetup -p1
+%autosetup -n %{name} -p1
 
 %build
 #UK
