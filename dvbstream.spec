@@ -13,12 +13,6 @@
 %define kernel_inc %kernel_dir/include
 %endif
 
-%if %beta
-%define release 0.%{beta}.%{mdkrel}
-%else
-%define release %{mdkrel}
-%endif
-
 Summary:	Dvbstream
 Name:		dvbstream
 Version:	0.8.2
