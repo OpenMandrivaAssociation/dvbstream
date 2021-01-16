@@ -23,6 +23,7 @@ URL:		http://www.linuxstb.org
 License:	GPL
 Group:		Video
 BuildRoot:	%{_tmppath}/%{name}-buildroot
+BuildRequires:	pkgconfig(ncurses)
 Prefix:		%{_prefix}
 
 %description
