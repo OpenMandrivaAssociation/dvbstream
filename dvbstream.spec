@@ -1,10 +1,6 @@
 # Define Mandrake Linux version we are building for
 %define mdkversion %(perl -pe '/(\\d+)\\.(\\d)\\.?(\\d)?/; $_="$1$2".($3||0)' /etc/mandrake-release)
 
-%define name	dvbstream
-%define version 0.5
-%define beta	0
-%define mdkrel	%mkrel 4
 
 %if %mdkversion < 1000
 %define kernel_rel 2.4.22-28.tmb.1mdk
@@ -17,21 +13,17 @@
 %define kernel_inc %kernel_dir/include
 %endif
 
-%if %beta
-%define release 0.%{beta}.%{mdkrel}
-%else
-%define release %{mdkrel}
-%endif
-
 Summary:	Dvbstream
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
-Source0:	http://osdn.dl.sourceforge.net/dvbtools/%{name}-%{version}.tar.bz2
+Name:		dvbstream
+Version:	0.8.2
+Release:	1
+#Source0:	http://osdn.dl.sourceforge.net/dvbtools/%{name}-%{version}.tar.bz2
+Source0:	http://www.orcas.net/dvbstream/dvbstream-%{version}.tar.bz2
 URL:		http://www.linuxstb.org
 License:	GPL
 Group:		Video
 BuildRoot:	%{_tmppath}/%{name}-buildroot
+BuildRequires:	pkgconfig(ncurses)
 Prefix:		%{_prefix}
 
 %description
@@ -42,7 +34,7 @@ Prefix:		%{_prefix}
  here.
 
 %prep
-%setup -q
+%autosetup -n %{name} -p1
 
 %build
 #UK
