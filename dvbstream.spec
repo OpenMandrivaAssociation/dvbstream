@@ -19,7 +19,7 @@ Version:	0.8.2
 Release:	1
 #Source0:	http://osdn.dl.sourceforge.net/dvbtools/%{name}-%{version}.tar.bz2
 Source0:	http://www.orcas.net/dvbstream/dvbstream-%{version}.tar.bz2
-URL:		http://www.linuxstb.org
+URL:		https://www.linuxstb.org
 License:	GPL
 Group:		Video
 BuildRoot:	%{_tmppath}/%{name}-buildroot
